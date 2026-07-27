@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kenva Lab — An independent AI studio building intelligent tools that push the boundaries of what's possible.">
-  <meta property="og:title" content="Kenva Lab — AI Projects Hub">
-  <meta property="og:description" content="An independent AI studio crafting intelligent tools for the future.">
-  <title>Kenva Lab — AI Projects Hub</title>
+  <meta name="description" content="I help companies turn product ambition into something that ships. Fractional VP of Product, AI strategy and Product Audits. Based in Barcelona, working with clients in Europe and LATAM.">
+  <meta property="og:title" content="Kenva Labs">
+  <meta property="og:description" content="Fractional product leadership and AI strategy for companies between 20 and 300 people.">
+  <meta property="og:url" content="https://kenvalabs.com">
+  <meta property="og:type" content="website">
+  <!-- TODO: Add og:image (1200x630 px recommended) -->
+  <title>Kenva Labs</title>
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><polygon points='16,2 30,10 30,22 16,30 2,22 2,10' fill='none' stroke='%236366f1' stroke-width='2'/><circle cx='16' cy='16' r='4' fill='%236366f1'/></svg>">
 
@@ -18,14 +21,13 @@
 </head>
 <body>
 
-  <!-- Background canvas -->
-  <canvas id="neural-canvas"></canvas>
+  <canvas id="neural-canvas" aria-hidden="true"></canvas>
 
   <!-- ======== NAVIGATION ======== -->
-  <nav class="nav" id="nav">
+  <nav class="nav" id="nav" aria-label="Main navigation">
     <div class="container nav__inner">
 
-      <a href="#" class="nav__logo">
+      <a href="#" class="nav__logo" aria-label="Kenva Labs home">
         <svg width="22" height="22" viewBox="0 0 28 28" fill="none" aria-hidden="true">
           <polygon points="14,2 26,8 26,20 14,26 2,20 2,8" stroke="url(#g1)" stroke-width="1.5" fill="none"/>
           <circle cx="14" cy="14" r="3" fill="url(#g1)"/>
@@ -39,18 +41,20 @@
             </linearGradient>
           </defs>
         </svg>
-        <span>Kenva<em>Lab</em></span>
+        <span>Kenva<em>Labs</em></span>
       </a>
 
-      <ul class="nav__links" id="nav-links">
-        <li><a href="#projects" class="nav__link">Projects</a></li>
+      <ul class="nav__links" id="nav-links" role="list">
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#work" class="nav__link">Work</a></li>
         <li><a href="#about" class="nav__link">About</a></li>
         <li><a href="#contact" class="nav__link">Contact</a></li>
       </ul>
 
-      <a href="#projects" class="btn btn--outline btn--sm nav__cta">Explore →</a>
+      <a href="mailto:david@kenvalabs.com" class="btn btn--outline btn--sm nav__cta">Let's talk</a>
 
-      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+      <button class="nav__hamburger" id="hamburger"
+              aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
 
@@ -58,233 +62,230 @@
   </nav>
 
   <!-- ======== HERO ======== -->
-  <section class="hero" id="home">
-    <div class="hero__radial"></div>
-    <div class="hero__grid-overlay"></div>
+  <section class="hero" id="home" aria-labelledby="hero-heading">
+    <div class="hero__radial" aria-hidden="true"></div>
+    <div class="hero__grid-overlay" aria-hidden="true"></div>
 
     <div class="container hero__content">
-      <div class="hero__badge anim-fade-down">
-        <span class="dot dot--green"></span>
-        AI Research &amp; Development
-      </div>
-
-      <h1 class="hero__title anim-fade-up">
-        Building the future<br>
-        with <span class="grad-text grad-animate">artificial intelligence</span>
+      <h1 class="hero__title anim-fade-up" id="hero-heading">
+        I help companies turn product ambition into
+        <span class="grad-text">something that ships.</span>
       </h1>
 
       <p class="hero__sub anim-fade-up d1">
-        A lab crafting intelligent tools that
-        <span class="typed" id="typed-text"></span><span class="cursor">|</span>
+        20+ years in product and technology. I scaled a product and engineering team
+        from <strong>7 to 42 people</strong>, took a subscription business to
+        <strong>+50% LTV and 16-month retention</strong>, and built AI agents running
+        in production at <strong>75-78% automation</strong>. I work with a small
+        number of companies at a time.
       </p>
 
       <div class="hero__ctas anim-fade-up d2">
-        <a href="#projects" class="btn btn--primary">
-          Explore Projects
+        <a href="mailto:david@kenvalabs.com" class="btn btn--primary">
+          Let's talk
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M3 8H13M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 4l6 4.5 6-4.5M2 4h12v8H2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           </svg>
         </a>
-        <a href="#about" class="btn btn--ghost">Learn More</a>
-      </div>
-
-      <div class="hero__stats anim-fade-up d3">
-        <div class="hero__stat">
-          <strong class="grad-text">1+</strong>
-          <span>Live Projects</span>
-        </div>
-        <div class="hero__stat-sep"></div>
-        <div class="hero__stat">
-          <strong class="grad-text">∞</strong>
-          <span>Possibilities</span>
-        </div>
-        <div class="hero__stat-sep"></div>
-        <div class="hero__stat">
-          <strong class="grad-text">AI</strong>
-          <span>First</span>
-        </div>
+        <a href="#services" class="btn btn--ghost">See how I work</a>
       </div>
     </div>
 
-    <div class="hero__scroll-hint">
+    <div class="hero__scroll-hint" aria-hidden="true">
       <div class="scroll-line"></div>
       <span>scroll</span>
     </div>
   </section>
 
-  <!-- ======== PROJECTS ======== -->
-  <section class="section projects-section" id="projects">
+  <!-- ======== WHAT I DO ======== -->
+  <section class="section services-section" id="services" aria-labelledby="services-heading">
     <div class="section__grid-bg" aria-hidden="true"></div>
     <div class="container">
 
       <header class="section__header reveal">
-        <span class="section__label">— Projects</span>
-        <h2 class="section__title">What I'm building</h2>
-        <p class="section__sub">
-          Each project is a deep exploration into how AI can transform
-          the way we live, work, and create.
-        </p>
+        <span class="section__label">What I Do</span>
+        <h2 class="section__title" id="services-heading">Three ways I can help</h2>
       </header>
 
-      <!-- Featured project -->
-      <article class="card card--featured reveal" id="atena-card">
-        <div class="card__border-fx" aria-hidden="true"></div>
-        <div class="card__glow-fx" aria-hidden="true"></div>
-        <div class="card__body">
+      <div class="offer-cards reveal">
 
-          <div class="card__top">
-            <div class="card__icon">
-              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
-                <polygon points="15,2 28,9 28,21 15,28 2,21 2,9" stroke="url(#cg1)" stroke-width="1.5" fill="none"/>
-                <polygon points="15,7 22,11 22,19 15,23 8,19 8,11" stroke="url(#cg1)" stroke-width="0.8" fill="none" opacity="0.4"/>
-                <circle cx="15" cy="15" r="3.5" fill="url(#cg1)"/>
-                <line x1="15" y1="5" x2="15" y2="11.5" stroke="url(#cg1)" stroke-width="1"/>
-                <line x1="5" y1="10.5" x2="11.5" y2="14" stroke="url(#cg1)" stroke-width="1"/>
-                <line x1="25" y1="10.5" x2="18.5" y2="14" stroke="url(#cg1)" stroke-width="1"/>
-                <defs>
-                  <linearGradient id="cg1" x1="2" y1="2" x2="28" y2="28">
-                    <stop stop-color="#6366f1"/>
-                    <stop offset="0.5" stop-color="#a855f7"/>
-                    <stop offset="1" stop-color="#00d4ff"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <div class="card__meta">
-              <span class="badge badge--live">
-                <span class="dot dot--green dot--sm"></span>
-                Live
-              </span>
-              <span class="badge badge--year">2024</span>
-            </div>
-          </div>
-
-          <h3 class="card__title">AteneaAI</h3>
-          <p class="card__desc">
-            Named after Athena — the goddess of wisdom — AteneaAI is a next-generation
-            intelligent platform that brings the power of advanced language models to everyday
-            work. From deep document analysis and knowledge synthesis to creative collaboration,
-            Atena thinks <em>with</em> you, not <em>for</em> you.
+        <article class="offer-card">
+          <div class="offer-card__num" aria-hidden="true">01</div>
+          <h3 class="offer-card__title">Fractional Product Leadership</h3>
+          <p class="offer-card__body">
+            Two or three days a week as your VP of Product. Strategy, roadmap,
+            hiring and the operating model, until you are ready to hire full time.
           </p>
-
-          <div class="card__tags">
-            <span class="tag">LLM</span>
-            <span class="tag">NLP</span>
-            <span class="tag">GPT-4</span>
-            <span class="tag">Web App</span>
-            <span class="tag">AI Assistant</span>
-          </div>
-
-          <div class="card__footer">
-            <a href="https://ateneai.com" target="_blank" rel="noopener noreferrer" class="card__cta">
-              Visit AteneaAI.com
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </a>
-            <div class="tech-stack">
-              <span class="tech-pill" style="--c:#6366f1" title="AI/ML">AI</span>
-              <span class="tech-pill" style="--c:#00d4ff" title="Web">WEB</span>
-              <span class="tech-pill" style="--c:#a855f7" title="API">API</span>
-            </div>
-          </div>
-
-        </div>
-      </article>
-
-      <!-- Coming soon grid -->
-      <div class="projects-grid">
-
-        <article class="card card--soon reveal">
-          <div class="card__body">
-            <div class="card__soon-icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <circle cx="14" cy="14" r="11" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" stroke-dasharray="4 4"/>
-                <path d="M14 8V14L18 18" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 class="card__title card__title--dim">Coming Soon</h3>
-            <p class="card__desc card__desc--dim">
-              New experiments brewing in the lab. Pushing the boundaries of what AI can do.
-            </p>
-          </div>
         </article>
 
-        <article class="card card--soon reveal d1">
-          <div class="card__body">
-            <div class="card__soon-icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <polygon points="14,2 26,9 26,19 14,26 2,19 2,9" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
-                <circle cx="14" cy="14" r="3" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"/>
-              </svg>
-            </div>
-            <h3 class="card__title card__title--dim">Coming Soon</h3>
-            <p class="card__desc card__desc--dim">
-              Intelligence meets creativity. The lab never sleeps — more coming soon.
-            </p>
-          </div>
+        <article class="offer-card">
+          <div class="offer-card__num" aria-hidden="true">02</div>
+          <h3 class="offer-card__title">AI That Actually Ships</h3>
+          <p class="offer-card__body">
+            For teams that want AI in the product and keep getting stuck at the demo.
+            I have shipped agents to production, watched them fail, and rebuilt them
+            with humans in the loop. Scoping, architecture decisions, evaluation and rollout.
+          </p>
+        </article>
+
+        <article class="offer-card">
+          <div class="offer-card__num" aria-hidden="true">03</div>
+          <h3 class="offer-card__title">Product Audit</h3>
+          <p class="offer-card__body">
+            Two to four weeks. Where the product is losing money, what to stop doing,
+            and what the next two quarters should look like. Delivered as a decision
+            document, not a deck.
+          </p>
         </article>
 
       </div>
     </div>
   </section>
 
-  <!-- ======== ABOUT ======== -->
-  <section class="section about-section" id="about">
-    <div class="about__ambient" aria-hidden="true"></div>
-    <div class="container about__grid">
+  <!-- ======== HOW I WORK ======== -->
+  <section class="section how-section" aria-label="How I work">
+    <div class="container">
+      <div class="how-block reveal">
+        <span class="section__label">How I Work</span>
+        <div class="how-block__text">
+          <p>
+            I work as one person by default. When a project needs more hands,
+            I bring in a trusted network of engineers, designers and data specialists
+            I have worked with for years. You get senior ownership without agency
+            overhead, and capacity when the work actually demands it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="about__copy reveal">
-        <span class="section__label">— About the Lab</span>
-        <h2 class="section__title">Crafting intelligence,<br>one project at a time</h2>
-        <p class="about__text">
-          Kenva Lab is an independent AI research and development studio.
-          I believe artificial intelligence is the most transformative tool
-          humanity has ever built — but only when designed with intention.
+  <!-- ======== SELECTED WORK ======== -->
+  <section class="section work-section" id="work" aria-labelledby="work-heading">
+    <div class="container">
+
+      <header class="section__header reveal">
+        <span class="section__label">Selected Work</span>
+        <h2 class="section__title" id="work-heading">Companies I have worked with</h2>
+      </header>
+
+      <ul class="work-list reveal" role="list">
+
+        <li class="work-entry">
+          <h3 class="work-entry__name">Prixz</h3>
+          <p class="work-entry__desc">Mexico's leading online pharmacy. Fractional product leadership.</p>
+        </li>
+
+        <li class="work-entry">
+          <h3 class="work-entry__name">PrimePlayers</h3>
+          <p class="work-entry__desc">A platform for investing in the economic rights clubs hold in developing footballers. Ongoing product and technical advisory.</p>
+        </li>
+
+        <li class="work-entry">
+          <h3 class="work-entry__name">Plinng</h3>
+          <p class="work-entry__desc">AI-first SaaS operating as an AI business operator for SMBs. 9,000+ businesses. Led product and engineering, from 7 to 42 people.</p>
+        </li>
+
+        <li class="work-entry">
+          <h3 class="work-entry__name">Domestika</h3>
+          <p class="work-entry__desc">Global creative learning platform. Led the move to subscription: +50% LTV and 16-month retention.</p>
+        </li>
+
+        <li class="work-entry">
+          <h3 class="work-entry__name">The Knot Worldwide</h3>
+          <p class="work-entry__desc">Wedding technology across 17 countries. Owned B2C, B2B, apps and e-commerce.</p>
+        </li>
+
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- ======== BUILT, NOT JUST ADVISED ======== -->
+  <section class="section built-section" aria-labelledby="atena-heading">
+    <div class="container">
+
+      <article class="card card--featured atena-card reveal">
+        <div class="card__border-fx" aria-hidden="true"></div>
+        <div class="card__glow-fx" aria-hidden="true"></div>
+        <div class="card__body atena-card__body">
+
+          <span class="section__label">Built, Not Just Advised</span>
+
+          <div class="atena-card__content">
+            <h2 class="atena-card__name" id="atena-heading">AteneAI</h2>
+            <p class="atena-card__desc">
+              AteneAI is an AI-native GEO platform that helps brands measure and shape
+              how they surface in LLM-powered search. I built it end to end, from
+              architecture to interface. It is how I keep my hands in the work I advise on.
+            </p>
+            <a href="https://ateneai.com" target="_blank" rel="noopener noreferrer" class="card__cta">
+              ateneai.com
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ======== ABOUT ======== -->
+  <section class="section about-section" id="about" aria-labelledby="about-heading">
+    <div class="about__ambient" aria-hidden="true"></div>
+    <div class="container about__inner reveal">
+
+      <span class="section__label">About</span>
+      <h2 class="section__title" id="about-heading">About</h2>
+
+      <div class="about__bio">
+        <p>
+          I started as a developer. I have founded three companies. Before going
+          independent, I led product at Domestika as it scaled to become one of
+          Spain's unicorns, and owned product across 17 countries at The Knot Worldwide.
         </p>
-        <p class="about__text">
-          Every project begins with one question:
-          <em>"How can AI make this genuinely better?"</em>
-          That question drives every decision, from architecture to interface.
+        <p>
+          I have been based in Barcelona since 2012. I work with clients in Europe and LATAM.
         </p>
-        <a href="mailto:hello@kenvalab.com" class="btn btn--primary">Get in touch</a>
       </div>
 
-      <div class="about__values reveal d1">
-        <div class="values-grid">
-          <div class="value-card">
-            <div class="value-icon">⚡</div>
-            <h4>Fast Iteration</h4>
-            <p>From idea to prototype in days, not months.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">🧠</div>
-            <h4>AI-First</h4>
-            <p>Intelligence at the core of every solution.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">🎯</div>
-            <h4>User-Focused</h4>
-            <p>Technology that serves people, not systems.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">🔬</div>
-            <h4>Research-Driven</h4>
-            <p>Built on solid foundations and emerging science.</p>
-          </div>
-        </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACT ======== -->
+  <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+    <div class="container contact__inner reveal">
+
+      <span class="section__label">Contact</span>
+      <h2 class="section__title" id="contact-heading">Let's talk</h2>
+      <p class="contact__sub">Send me a note. I respond to every message personally.</p>
+
+      <div class="contact__actions">
+        <a href="mailto:david@kenvalabs.com" class="contact__email">
+          david@kenvalabs.com
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path d="M2 5l7 5 7-5M2 5h14v9H2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </a>
+
+        <!-- TODO: Replace href="#" with your booking link (e.g. a Calendly URL) -->
+        <a href="#" class="btn btn--ghost" aria-label="Book a call (booking link coming soon)">
+          Book a call
+        </a>
       </div>
 
     </div>
   </section>
 
   <!-- ======== FOOTER ======== -->
-  <footer class="footer" id="contact">
+  <footer class="footer">
     <div class="container footer__inner">
 
       <div class="footer__main">
         <div class="footer__brand">
-          <a href="#" class="footer__logo">
+          <a href="#" class="footer__logo" aria-label="Kenva Labs home">
             <svg width="18" height="18" viewBox="0 0 28 28" fill="none" aria-hidden="true">
               <polygon points="14,2 26,8 26,20 14,26 2,20 2,8" stroke="url(#fg1)" stroke-width="1.5" fill="none"/>
               <circle cx="14" cy="14" r="2.5" fill="url(#fg1)"/>
@@ -295,28 +296,30 @@
                 </linearGradient>
               </defs>
             </svg>
-            <span>Kenva<em>Lab</em></span>
+            <span>Kenva<em>Labs</em></span>
           </a>
-          <p>Building the future with AI</p>
+          <p>Independent product and AI practice.<br>Based in Barcelona.</p>
         </div>
 
         <nav class="footer__nav" aria-label="Footer navigation">
           <div class="footer__col">
-            <h5>Projects</h5>
-            <a href="https://ateneai.com" target="_blank" rel="noopener">AteneaAI</a>
-            <a href="#projects">View All</a>
+            <p class="footer__col-h">Services</p>
+            <a href="#services">Fractional Leadership</a>
+            <a href="#services">AI Strategy</a>
+            <a href="#services">Product Audit</a>
           </div>
           <div class="footer__col">
-            <h5>Lab</h5>
-            <a href="#about">About</a>
-            <a href="mailto:hello@kenvalab.com">Contact</a>
+            <p class="footer__col-h">Links</p>
+            <a href="#work">Selected Work</a>
+            <a href="https://ateneai.com" target="_blank" rel="noopener">AteneAI</a>
+            <a href="mailto:david@kenvalabs.com">david@kenvalabs.com</a>
           </div>
         </nav>
       </div>
 
       <div class="footer__bottom">
-        <span>© 2024 Kenva Lab · All rights reserved</span>
-        <span class="footer__built">Built with intelligence ✦</span>
+        <span>© 2026 Kenva Labs</span>
+        <span class="footer__url">kenvalabs.com</span>
       </div>
 
     </div>
