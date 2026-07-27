@@ -30,4 +30,4 @@ in the repository.
 ## Pending
 
 - Replace the `href="#"` booking link in the Contact section with a real URL (e.g. Calendly).
-- Add an `og:image` (1200x630 px) and reference it in the `<head>`.
+- ~~Add an `og:image`~~ Done. `/og.png` is the source file; regenerate it by running `python3 scripts/gen_og.py` if the generator script is added.
