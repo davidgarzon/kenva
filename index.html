@@ -259,11 +259,10 @@
 
       <div class="about__layout">
 
-        <!-- TODO: add the photo file to the repo root as david.jpg, then
-             uncomment the line below. Left commented so the live site does
-             not render a broken image while the file is missing.
-        <img src="david.jpg" alt="David Garzón" class="about__photo" width="104" height="104">
-        -->
+        <!-- Revealed by initAboutPhoto() only once the file loads, so a
+             missing david.jpg degrades to no photo instead of a broken image. -->
+        <img src="david.jpg" alt="David Garz&oacute;n" class="about__photo"
+             width="104" height="104" hidden>
 
         <div class="about__bio">
         <p>

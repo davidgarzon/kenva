@@ -179,3 +179,16 @@
     });
   });
 })();
+
+
+/* ── About photo: show only if the file actually loads ────── */
+(function initAboutPhoto() {
+  const img = document.querySelector('.about__photo');
+  if (!img) return;
+
+  if (img.complete) {
+    if (img.naturalWidth > 0) img.hidden = false;
+    return;
+  }
+  img.addEventListener('load', () => { img.hidden = false; });
+})();
