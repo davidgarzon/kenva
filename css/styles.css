@@ -678,19 +678,30 @@ button { cursor: pointer; font-family: var(--font); }
   max-width: 640px;
 }
 
-.about__inner .section__title {
-  /* visually deemphasized since it repeats the label */
-  font-size: 0;
-  height: 0;
-  overflow: hidden;
-  margin: 0;
+.about__layout {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s6);
+  margin-top: var(--s4);
+}
+
+.about__photo {
+  flex: 0 0 auto;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
 }
 
 .about__bio {
   display: flex;
   flex-direction: column;
   gap: var(--s4);
-  margin-top: var(--s4);
+}
+
+@media (max-width: 640px) {
+  .about__layout { flex-direction: column; gap: var(--s4); }
 }
 
 .about__bio p {
@@ -782,6 +793,12 @@ button { cursor: pointer; font-family: var(--font); }
   font-size: 13px;
   color: var(--text-3);
   line-height: 1.6;
+}
+
+.footer__brand .footer__person {
+  font-size: 13px;
+  color: var(--text-2);
+  font-weight: 500;
 }
 
 .footer__nav { display: flex; gap: var(--s16); }
