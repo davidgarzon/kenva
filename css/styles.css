@@ -328,7 +328,7 @@ button { cursor: pointer; font-family: var(--font); }
   position: relative;
   z-index: 1;
   padding: var(--s20) 0 var(--s16);
-  max-width: 820px;
+  max-width: 1080px;
 }
 
 .hero__title {
@@ -336,6 +336,7 @@ button { cursor: pointer; font-family: var(--font); }
   font-weight: 700;
   letter-spacing: -.035em;
   line-height: 1.05;
+  text-wrap: balance;
   margin-bottom: var(--s6);
 }
 

@@ -1,6 +1,6 @@
 # Kenva Labs
 
-Independent product and AI practice. Based in Barcelona.
+Product and technology leadership, embedded in the client's team. Based in Barcelona.
 
 Site: [kenvalabs.com](https://kenvalabs.com)  
 Contact: david@kenvalabs.com
@@ -30,4 +30,4 @@ in the repository.
 ## Pending
 
 - Replace the `href="#"` booking link in the Contact section with a real URL (e.g. Calendly).
-- ~~Add an `og:image`~~ Done. `/og.png` is the source file; regenerate it by running `python3 scripts/gen_og.py` if the generator script is added.
+- ~~Add an `og:image`~~ Done. Regenerate `og.png` and `linkedin-cover.png` with `python3 scripts/gen_og.py` (the claim is the `CLAIM` constant).
