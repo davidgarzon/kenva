@@ -1,5 +1,5 @@
 /* ============================================================
-   KENVA LABS — Main JavaScript
+   KENVA LABS: Main JavaScript
    Neural canvas · Nav · Scroll reveal · Card glow
    ============================================================ */
 
